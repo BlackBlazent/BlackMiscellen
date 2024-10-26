@@ -32,6 +32,7 @@ Add badges from somewhere like: [shields.io](https://shields.io/)
 ## Table of Contents
 ## Galleries
 <img src="https://github.com/LoneStamp/BlackDownloader/blob/main/docs/Screenshot(2).png"/>
+
 ## Tech Stack
 
 **Client:** Python
