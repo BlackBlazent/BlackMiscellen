@@ -1,0 +1,10 @@
+# Project Manifest
+Project-Name: BlackDownloader
+Version: 1.10.0
+Author: BlackRose
+License: MIT
+Description: A systematic downloader which covers a wide variety of platforms made by BlackBlazent.
+
+Dependencies:
+- library1 >= 1.0.0
+- library2
