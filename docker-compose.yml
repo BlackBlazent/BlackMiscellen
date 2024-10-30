@@ -1,0 +1,17 @@
+version: '3'
+services:
+  blackdownloader:
+    build: .
+    container_name: blackdownloader_app
+    volumes:
+      - .:/usr/src/app
+    environment:
+      - ENV=production
+    ports:
+      - "5000:5000"  # Expose the port if the app runs on a web interface
+    networks:
+      - blackdownloader_network
+
+networks:
+  blackdownloader_network:
+    driver: bridge
