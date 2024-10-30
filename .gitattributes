@@ -1,0 +1,38 @@
+# Set default behavior for all text files
+* text=auto
+
+# Define specific text files
+*.txt text
+*.md text
+*.py text
+
+# Define binary files
+*.png binary
+*.jpg binary
+*.gif binary
+*.zip binary
+*.tar.gz binary
+
+# Custom merge strategy for specific files
+*.lock merge=ours
+
+# Set line endings
+# Use LF for Unix/Linux
+*.sh text eol=lf
+# Use CRLF for Windows
+*.bat text eol=crlf
+
+# For specific file types, enforce specific line endings
+*.cpp text eol=lf
+*.java text eol=lf
+
+# Mark specific files as binary to prevent Git from trying to diff them
+*.pdf binary
+*.exe binary
+*.dll binary
+
+# Set diff attributes for specific files
+*.json diff=json
+
+# Specify end-of-line normalization for all text files
+* text=auto
