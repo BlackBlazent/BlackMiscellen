@@ -1,0 +1,43 @@
+# EditorConfig is awesome: https://EditorConfig.org
+
+# top-most EditorConfig file
+root = true
+
+[*]
+# Indentation style (set to 'tab' or 'space')
+indent_style = space
+# Indentation size (number of spaces)
+indent_size = 4
+# Charset
+charset = utf-8
+# Trim trailing whitespace
+trim_trailing_whitespace = true
+# Insert a final newline at the end of files
+insert_final_newline = true
+
+# Specify different settings for specific file types
+[*.md]
+# Markdown files use 2 spaces for indentation
+indent_size = 2
+
+[*.json]
+# JSON files should have no trailing commas
+insert_final_newline = true
+
+[*.py]
+# Python files use 4 spaces for indentation
+indent_size = 4
+# Use single quotes for string literals
+quote_type = single
+
+[*.yml]
+# YAML files should have 2 spaces for indentation
+indent_size = 2
+
+[*.js]
+# JavaScript files should use single quotes
+quote_type = single
+
+[*.css]
+# CSS files use a single newline at the end
+insert_final_newline = true
