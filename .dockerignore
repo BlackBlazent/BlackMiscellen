@@ -1,0 +1,10 @@
+# Ignore Python cache files
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore the backup directory to avoid copying sensitive files
+App/data/forbidden/backup/
+
+# Ignore system files
+.DS_Store
