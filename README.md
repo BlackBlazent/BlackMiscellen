@@ -1,5 +1,5 @@
 
-![Logo](https://github.com/LoneStamp/BlackDownloader/blob/main/src/icon/blackdownloader.png)
+<!--![Logo](https://github.com/LoneStamp/BlackDownloader/blob/main/src/icon/blackdownloader.png)-->
 
 
 # BlackDownloader
@@ -68,10 +68,54 @@ What optimizations did you make in your code? E.g. refactors, performance improv
 
 ## Features
 
-- Light/dark mode toggle
-- Live previews
-- Fullscreen mode
-- Cross platform
+- Torrent Downloads
+- Social Media
+  * **Facebook**
+    1. Public & Private Accounts
+       - Reels
+       - Videos
+       - Photos
+       - Convert video to audio
+       - Saved items
+       - Stories/Highlights
+       - (!) User Profile Link: Download all items in bulk
+       - Note (!): Integrate API for enhanced quality, optional
+  * **YouTube**
+    1. Shorts
+    2. Videos
+    3. Playlists
+    4. Convert video to audio
+    5. (!) User Channel Profile Link: Bulk download option
+    6. Note: Integrate API for enhanced quality, optional
+  * **TikTok**
+    1. Remove watermarks
+    2. Convert video to audio
+    3. (!) User Profile Link: Bulk download option
+    4. Note (!): Integrate API for enhanced quality, optional
+  * **Threads**
+    1. Private & Public Accounts
+       - Photos
+       - Videos
+       - (!) User Profile Link: Bulk download of all posts
+       - Note (!): Integrate API for enhanced quality, optional
+  * **Snapchat**
+    1. Remove watermarks
+       - Videos
+    2. Photos
+    3. Stories/Highlights
+  * **X (Twitter)**
+    1. Bulk download option
+       - (!) User Profile Link
+  * **Pinterest**
+    1. Bulk download from board link
+  * **Spotify**
+    1. Bulk download of playlists
+    2. Tracks
+    3. Podcasts
+
+- Bulk Download
+- Console Application
+
 
 
 ## Environment Variables
