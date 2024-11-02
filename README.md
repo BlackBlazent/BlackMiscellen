@@ -2,16 +2,19 @@
 <!--![Logo](https://github.com/LoneStamp/BlackDownloader/blob/main/src/icon/blackdownloader.png)-->
 
 
-# BlackDownloader
+# BlackMiscellen
 
-A brief description of what this project does and who it's for
+A Integrated Miscellaneous tools.
 
 
-## Acknowledgements
+## Acknowledgments:
+This project is made possible with the support of open-source tools:
+- yt-dlp: For media downloads and conversions ([GitHub](https://awesomeopensource.com/project/elangosundar/awesome-README-templates))
+- spotify-dl: For downloading tracks from Spotify ([GitHub](https://github.com/matiassingers/awesome-readme))
+- ffmpeg: For multimedia handling ([ffmpeg.org](https://ffmpeg.org/))
+- instaloader: For downloading Instagram content ([instaloader.github.io](https://instaloader.github.io/))
+- sherlock: For OSINT user account searches ([GitHub](https://github.com/sherlock-project/sherlock))
 
- - [yt-dlp](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
- - [spotify-dl](https://github.com/matiassingers/awesome-readme)
- - [ffmpeg](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
 
 
 ## Authors
