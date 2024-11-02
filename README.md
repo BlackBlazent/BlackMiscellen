@@ -34,7 +34,7 @@ Add badges from somewhere like: [shields.io](https://shields.io/)
 ## Preface
 ## Table of Contents
 ## Galleries
-<img src="https://github.com/LoneStamp/BlackDownloader/blob/main/docs/Screenshot(2).png"/>
+<img src="https://github.com/LoneStamp/BlackDownloader/blob/main/docs/Screenshot(2).png](https://github.com/LoneStamp/BlackMiscellen/blob/main/docs/miscellen.png"/>
 
 ## Tech Stack
 
