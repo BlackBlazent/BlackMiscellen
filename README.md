@@ -71,53 +71,108 @@ What optimizations did you make in your code? E.g. refactors, performance improv
 
 ## Features
 
-- Torrent Downloads
-  * Multi-Tasking
-  * Pause and Continue command
-- Social Media
-  * **Facebook**
-    1. Public & Private Accounts
-       - Reels
-       - Videos
-       - Photos
-       - Convert video to audio
-       - Saved items
-       - Stories/Highlights
-       - (!) User Profile Link: Download all posts in bulk
-       - Note (!): Integrate API for enhanced quality, but user optionally to provide.
-  * **YouTube**
-    1. Shorts
-    2. Videos
-    3. Playlists
-    4. Convert video to audio
-    5. (!) User Channel Profile Link: Download all Channel Videos
-    6. Note (!): Integrate API for enhanced quality, but user optionally to provide.
-  * **TikTok**
-    1. Remove watermarks
-    2. Convert video to audio
-    3. (!) User Profile Link: Bulk download option
-    4. Note (!): Integrate API for enhanced quality, but user optionally to provide.
-  * **Threads**
-    1. Private & Public Accounts
-       - Photos
-       - Videos
-       - (!) User Profile Link: Bulk download of all posts
-       - Note (!): Integrate API for enhanced quality, but user optionally to provide.
-  * **Snapchat**
-    1. Remove watermarks
-       - Videos
-    2. Photos
-    3. Stories/Highlights
-  * **X (Twitter)**
-    1. Bulk download option
-       - (!) User Profile Link
-  * **Pinterest**
-    1. Bulk download from board link
-  * **Spotify**
-    1. Bulk download of playlists
-    2. Tracks
-    3. Podcasts
-    4. Note (!): Integrate API for enhanced quality, but user optionally to provide.
+#### Downloader Sections
+
+- **Torrent Downloads**
+  <details>
+    <summary>Features</summary>
+    
+    - Multi-Tasking
+    - Pause and Continue command
+    
+  </details>
+
+- **Social Media**
+  <details>
+    <summary>Platforms</summary>
+
+    - **Facebook**
+      <details>
+        <summary>Details</summary>
+        
+        - Public & Private Accounts
+          - Reels
+          - Videos
+          - Photos
+          - Convert video to audio
+          - Saved items
+          - Stories/Highlights
+          - (!) User Profile Link: Download all posts in bulk
+          - Note (!): Integrate API for enhanced quality, but user optionally to provide.
+          
+      </details>
+
+    - **YouTube**
+      <details>
+        <summary>Details</summary>
+        
+        - Shorts
+        - Videos
+        - Playlists
+        - Convert video to audio
+        - (!) User Channel Profile Link: Download all Channel Videos
+        - Note (!): Integrate API for enhanced quality, but user optionally to provide.
+        
+      </details>
+
+    - **TikTok**
+      <details>
+        <summary>Details</summary>
+        
+        - Remove watermarks
+        - Convert video to audio
+        - (!) User Profile Link: Bulk download option
+        - Note (!): Integrate API for enhanced quality, but user optionally to provide.
+        
+      </details>
+
+    - **Threads**
+      <details>
+        <summary>Details</summary>
+        
+        - Private & Public Accounts
+          - Photos
+          - Videos
+          - (!) User Profile Link: Bulk download of all posts
+          - Note (!): Integrate API for enhanced quality, but user optionally to provide.
+          
+      </details>
+
+    - **Snapchat**
+      <details>
+        <summary>Details</summary>
+        
+        - Remove watermarks
+        - Videos
+        - Photos
+        - Stories/Highlights
+        
+      </details>
+
+    - **X (Twitter)**
+      <details>
+        <summary>Details</summary>
+        
+        - Bulk download option
+          - (!) User Profile Link
+          
+      </details>
+
+    - **Pinterest**
+      - Bulk download from board link
+
+    - **Spotify**
+      <details>
+        <summary>Details</summary>
+        
+        - Bulk download of playlists
+        - Tracks
+        - Podcasts
+        - Note (!): Integrate API for enhanced quality, but user optionally to provide.
+        
+      </details>
+
+  </details>
 
 - Bulk Download
 - Console Application
