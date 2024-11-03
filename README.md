@@ -70,7 +70,11 @@ What optimizations did you make in your code? E.g. refactors, performance improv
 
 
 ## Features
-
+#### Converter
+#### OSINT
+#### Language Transaltor
+#### Photos/Videos Filters
+#### Generation
 #### Downloader Sections
 
 - **Torrent Downloads**
