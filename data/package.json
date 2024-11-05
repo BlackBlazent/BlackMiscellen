@@ -1,0 +1,26 @@
+{
+    "name": "BlackDownloader",
+    "version": "1.10.0",
+    "description": "A meida downloader by BlackBlazent.",
+    "author": "BlackRose",
+    "license": "MIT",
+    "dependencies": {
+      "yt-dlp": "^0.1.0"
+    },
+    "scripts": {
+      "start": "python BlackDownloader.py"
+    },
+    "keywords": [
+      "downloader",
+      "media",
+      "audio",
+      "video",
+      "images"
+    ],
+    "apiKeys": {
+      "youtube": "YOUR_YOUTUBE_API_KEY",
+      "otherAPIs": {
+        "exampleAPI": "YOUR_EXAMPLE_API_KEY"
+      }
+    }
+  }
