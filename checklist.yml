@@ -1,0 +1,82 @@
+modules_tests:
+  - platform: "Facebook"
+    test_completed: true
+    error: null
+    notes: "!"
+
+  - platform: "Instagram"
+    test_completed: true
+    account: "Download completed without errors. Private accounts not tested."
+    videos: "Download completed without errors. Private accounts not tested."
+    photos: "Download completed without errors. Private accounts not tested."
+    audio: "Download completed without errors. Private accounts not tested."
+    highlights: "Download unsuccessful. Credentials not yet implemented."
+    stories: "Download unsuccessful. Credentials not yet implemented."
+    saved: "Download unsuccessful. Credentials not yet implemented."
+    test_hypothesis: "Tested only once."
+    error: null
+    verification: "✔️"
+    notes: "Posts downloaded successfully."
+    future_update_improvements: "Implement fixes in the next update."
+
+  - platform: "Twitter"
+    test_completed: false
+    error: "!"
+    notes: "!"
+
+  - platform: "Pinterest"
+    test_completed: true
+    photos: "Issues encountered when downloading photos; not all images download. Scrolling the page may help in bulk downloads from Pinterest boards."
+    videos: "Bulk downloading of videos from Pinterest boards not tested."
+    test_hypothesis: "Tested only once."
+    error: "Unpredicted issue."
+    verification: "✔️"
+    notes: "Download of all photos and videos not guaranteed."
+    future_update_improvements:
+      - "Ensure full functionality to download all items in Pinterest boards."
+      - "Integrate profile link functionality to download all Pinterest content in bulk."
+
+  - platform: "YouTube"
+    test_completed: true
+    videos: "Downloaded successfully."
+    audio: "Downloaded and converted successfully."
+    test_hypothesis: "Tested with single video links and a playlist of up to 12 videos (including Shorts)."
+    experiment_subject: "Playlist tested: https://www.youtube.com/watch?v=1dkKlVjwvFg&list=PLrdZb8zHBvYQ6qWJhBSkooUeyRIKymI5t"
+    error: null
+    verification: "✔️"
+    notes: "Tested only once with a 12-video playlist."
+    future_update_improvements:
+      - "Include YouTube API to reduce errors."
+      - "Add functionality to download all videos from a channel/profile in bulk."
+
+  - platform: "Threads"
+    test_completed: true
+    videos: ""
+    photos: "Download unsuccessful."
+    error: null
+    notes: "!"
+
+  - platform: "Snapchat"
+    test_completed: true
+    error: null
+    notes: "!"
+
+  - platform: "Spotify"
+    test_completed: true
+    error: null
+    notes: "!"
+
+  - platform: "TikTok"
+    test_completed: true
+    audio: "Audio downloaded without issues."
+    video: "Videos downloaded successfully without watermarks, but an error log appears."
+    test_hypothesis: "Tested only once; not tested with longer videos."
+    error: "AttributeError: 'NoneType' object has no attribute 'lower'"
+    verification: "✔️"
+    notes: "Downloads videos without watermarks, with video-to-audio conversion."
+    future_update_improvements:
+      - "Improve download functionality to exclude watermarks."
+      - "Add profile link support to download all videos in a profile in bulk."
+      - "Consider adding an API key for better performance and results."
+
+notes: "This checklist verifies the downloader module for various social media platforms."
