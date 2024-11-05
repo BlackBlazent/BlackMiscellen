@@ -5,7 +5,7 @@ import time
 from datetime import datetime
 import signal
 from App.settings.theme import color_scheme
-from App.settings.locales.arabic_setting import enable_translation, translate_text, load_translations  # Make sure to import translate_text if that's what you use
+from App.settings.locales.arabic_setting import enable_translation, translate_text, load_translations  
 import subprocess
 import sys
 import platform
@@ -15,20 +15,20 @@ for i in dir(__builtins__):
         print(i)
 
 from App.app import generate_random_word, confirm_deletion, delete_file
-from src.banners.banner import start_banner, load_banners_from_folder, animate_ascii_art, stop_banner   # Import the banner display function
+from src.banners.banner import start_banner, load_banners_from_folder, animate_ascii_art, stop_banner   
 from src.book.bible import display_daily_verse
 
 # From Download Modules
-from modules.SocMEd.YouTube import download_youtube_video, download_youtube_audio  # Import YouTube functions
-from modules.SocMEd.Facebook import download_facebook_video, download_facebook_audio, save_facebook_credentials  # Facebook functions
+from modules.SocMEd.YouTube import download_youtube_video, download_youtube_audio  
+from modules.SocMEd.Facebook import download_facebook_video, download_facebook_audio, save_facebook_credentials  
 from modules.SocMEd.Instagram import download_instagram_highlights, download_instagram_profile, download_instagram_saved, download_instagram_stories, download_instagram_video, download_instagram_audio, download_instagram_photos, save_instagram_credentials, setup_instaloader  # Instagram functions
 from  modules.SocMEd.Instagram import SESSION_FILE_PATH
-from modules.SocMEd.TikTok import download_tiktok_video, download_tiktok_audio  # Import TikTok functions
-from modules.SocMEd.Pinterest import download_pinterest_video, download_pinterest_photos  # Pinterest functions
-from modules.SocMEd.Spotify import download_spotify_audio, download_spotify_playlist, get_spotify_api_key  # Spotify functions
-from modules.SocMEd.Threads import download_threads_video, download_threads_photos  # Threads functions
-from modules.SocMEd.Snapchat import download_snapchat_video, download_snapchat_audio, download_snapchat_photos, remove_watermark  # Snapchat functions
-from modules.SocMEd.Twitter import download_twitter_video, download_twitter_audio, download_twitter_gifs, download_twitter_images  # Twitter functions
+from modules.SocMEd.TikTok import download_tiktok_video, download_tiktok_audio  
+from modules.SocMEd.Pinterest import download_pinterest_video, download_pinterest_photos  
+from modules.SocMEd.Spotify import download_spotify_audio, download_spotify_playlist, get_spotify_api_key  
+from modules.SocMEd.Threads import download_threads_video, download_threads_photos  
+from modules.SocMEd.Snapchat import download_snapchat_video, download_snapchat_audio, download_snapchat_photos, remove_watermark  
+from modules.SocMEd.Twitter import download_twitter_video, download_twitter_audio, download_twitter_gifs, download_twitter_images  
 from modules.torrent.torrent import download_magnet, download_direct, download_torrent
 
 # langauges
@@ -50,7 +50,7 @@ def set_executable_permission(file_path):
     current_os = platform.system()
 
     if current_os == "Linux" or current_os == "Darwin":  # Darwin is macOS
-        # Set executable permissions on Unix-based systems (Linux, macOS)
+       
         subprocess.run(["chmod", "+x", file_path], check=True)
         print(f"Set executable permissions for {file_path} on {current_os}")
     elif current_os == "Windows":
@@ -66,12 +66,12 @@ def run_reader_script():
 
         # Run reader.sh
         result = subprocess.run(["./App/data/reader.sh"], check=True, text=True, capture_output=True, shell=True)
-        print(result.stdout)  # Print output from reader.sh
+        print(result.stdout)  
 
     except subprocess.CalledProcessError as e:
         print(f"Error running reader.sh: {e.stderr}")
 
-# Run reader.sh before executing the main script
+
 run_reader_script()
 
 # Main Menu
@@ -116,7 +116,7 @@ def main_menu():
         else:
             print("Think thought unto your Heart. Choose her/him wisely!")
 
-# Conertion MEnu
+# Convertion Menu
 '''Start of Convertion Menu'''
 def converter_menu():
     while True:
@@ -173,11 +173,11 @@ def downloader_menu():
         choice = input("Please select an option: ")
 
         if choice == '1':
-            torrent_menu()  # Torrent options
+            torrent_menu()  
         elif choice == '2':
-            socmed_menu()  # Social Media download options
+            socmed_menu()  
         elif choice == '3':
-            settings_menu()  # Application settings
+            settings_menu()  
         elif choice == '4':
             print("Exiting BlackDownloader.")
             break
@@ -214,7 +214,7 @@ def torrent_menu():
                 destination_folder = "./Out/torrents/file.torrent/"
             download_torrent(torrent_file_path, destination_folder)
         elif choice == '4':
-            break  # Go back to the main menu
+            break  
         else:
             print("Invalid choice, please select again.")
 
@@ -227,7 +227,7 @@ def socmed_menu():
         print("2. Download from Facebook (Not Available)")  # Video & Audio
         print("3. Download from X 'Twitter' (Not Available)")  # Video & Audio
         print("4. Download from Spotify (Not Available)")  # Video & Audio
-        print("5. Download from Threads (Not Available)")  # Video only
+        print("5. Download from Threads (Not Available)")  # Video & Photos
         print("6. Download from Instagram")  # Video, Audio, Photos
         print("7. Download from Pinterest")  # Video & Photos
         print("8. Download from TikTok")  # Video & Audio
@@ -237,59 +237,27 @@ def socmed_menu():
         choice = input("Please select a platform or back to?: ")
 
         if choice == '1':
-            youtube_menu()  # YouTube download selection
+            youtube_menu()  
         elif choice == '2':
-            facebook_menu()  # Facebook download selection
+            facebook_menu()  
         elif choice == '3':
-            twitter_menu()  # X (Twitter) download selection
+            twitter_menu()  
         elif choice == '4':
-            spotify_menu()  # Spotify download selection
+            spotify_menu()  
         elif choice == '5':
-            threads_menu()  # Threads download selection
+            threads_menu()  
         elif choice == '6':
-            instagram_menu()  # Instagram download selection
+            instagram_menu()  
         elif choice == '7':
-            pinterest_menu()  # Pinterest download selection
+            pinterest_menu()  
         elif choice == '8':
-            tiktok_menu()  # TikTok download selection
+            tiktok_menu()  
         elif choice == '9':
-            snapchat_menu()  # Snapchat download selection
+            snapchat_menu()  
         elif choice == '10':
-            break  # Go back to the main menu
+            break  
         else:
             print("Invalid choice, please select again.")
-
-
-''' def youtube_menu():
-    print("YouTube Download option selected.")
-
-def facebook_menu():
-    print("Facebook Download option selected.")
-
-def twitter_menu():
-    print("Twitter (X) Download option selected.")
-
-def spotify_menu():
-    print("Spotify Download option selected.")
-
-def threads_menu():
-    print("Threads Download option selected.")
-
-def instagram_menu():
-    print("Instagram Download option selected.")
-
-def pinterest_menu():
-    print("Pinterest Download option selected.")
-
-def tiktok_menu():
-    print("TikTok Download option selected.")
-
-def snapchat_menu():
-    print("Snapchat Download option selected.")
-
-# Start the application by showing the main menu
-main_menu()
-'''
 
 # This is YouTube
 def youtube_menu():
@@ -320,7 +288,7 @@ def facebook_menu():
         print("\n------nFacebook Download Options:------")
         print("1. Download Facebook Video")
         print("2. Download Facebook Audio")
-        print("3. Set Facebook Login Credentials")  # New option to set credentials
+        print("3. Set Facebook Login Credentials") 
         print("4. Back to Main Menu")
 
         choice = input("Please select an option: ")
@@ -329,22 +297,22 @@ def facebook_menu():
             url = input("Enter the Facebook video Link: ")
             private = input("Is the video private? (y/n): ").lower()
             if private == 'y':
-                download_facebook_video(url, use_auth=True)  # Download using authentication
+                download_facebook_video(url, use_auth=True)  
             else:
-                download_facebook_video(url)  # Download without authentication
+                download_facebook_video(url)  
         elif choice == '2':
             url = input("Enter the Facebook audio Link: ")
             private = input("Is the audio private? (y/n): ").lower()
             if private == 'y':
-                download_facebook_audio(url, use_auth=True)  # Download using authentication
+                download_facebook_audio(url, use_auth=True)  
             else:
-                download_facebook_audio(url)  # Download without authentication
+                download_facebook_audio(url)  
         elif choice == '3':
             # Set Facebook credentials
             email = input("Enter your Facebook email: ")
             mobile = input("Enter your two-factor authentication mobile (if applicable): ")
             password = input("Enter your Facebook password: ")
-            save_facebook_credentials(email, mobile, password)  # Save credentials to JSON
+            save_facebook_credentials(email, mobile, password)  
         elif choice == '4':
             break
         else:
@@ -427,10 +395,7 @@ def spotify_menu():
 def download_spotify_podcast(url, api_key):
     """Download a Spotify podcast using the provided API key."""
     print(f"Starting download of podcast from URL: {url}")
-    # Add the logic here to download a podcast, using the Spotify API or another tool
-    # Example placeholder logic
     try:
-        # Here you would add code to handle the podcast download
         print("Podcast download complete!")
     except Exception as e:
         print(f"Failed to download podcast: {e}")
@@ -440,9 +405,9 @@ def prompt_for_api_key(url, download_type):
     retry = input("Error when downloading. Would you like to provide a Spotify API key? (y/n): ")
     if retry.lower() == 'y':
         new_api_key = input("Enter your Spotify API key: ")
-        get_spotify_api_key(new_api_key)  # Save the new key
+        get_spotify_api_key(new_api_key)  
 
-        # Retry download with updated API key
+       
         if download_type == 'playlist':
             download_spotify_playlist(url, new_api_key)
         elif download_type == 'audio':
@@ -491,7 +456,7 @@ def instagram_menu():
         print("5. Download Instagram Stories")
         print("6. Download Instagram Highlights")
         print("7. Download Instagram Saved Content")
-        print("8. Login to Instagram")  # Use Instaloader session-based login
+        print("8. Login to Instagram") 
         print("9. Back to Main Menu")
 
         choice = input("Please select an option: ")
@@ -499,8 +464,8 @@ def instagram_menu():
         if choice == '1':
             profile_url = input("Enter the Instagram profile URL: ")
             private = input("Is the profile private? (y/n): ").lower()
-            is_private = private == 'y'  # Convert the input to a boolean
-            download_instagram_profile(profile_url, is_private)  # Pass both arguments
+            is_private = private == 'y'  
+            download_instagram_profile(profile_url, is_private)  
         elif choice == '2':
             url = input("Enter the Instagram video Link: ")
             private = input("Is the video private? (y/n): ").lower()
@@ -533,15 +498,15 @@ def instagram_menu():
             download_instagram_saved(profile_url)
         elif choice == '8':
             # Check if session file exists
-            session_file_path = SESSION_FILE_PATH.replace('your_username', 'your_actual_username')  # Replace with actual username
+            session_file_path = SESSION_FILE_PATH.replace('your_username', 'your_actual_username')  
             if not os.path.exists(session_file_path):
                 print("No existing session found. Please log in to your Instagram account.")
                 email = input("Enter your Instagram email: ")
                 password = input("Enter your Instagram password: ")
 
                 # Save the credentials
-                save_instagram_credentials(email=email, mobile=None, password=password)  # Assuming mobile is not required
-                # Now set up Instaloader with the provided credentials
+                save_instagram_credentials(email=email, mobile=None, password=password)  
+            
 
                 L = setup_instaloader(login=True)
                 if L.context.is_logged_in:
@@ -566,10 +531,10 @@ def pinterest_menu():
 
         if choice == '1':
             url = input("Enter the Pinterest video Link: ")
-            download_pinterest_video(url)  # Download Pinterest video
+            download_pinterest_video(url)  
         elif choice == '2':
             url = input("Enter the Pinterest photos Link: ")
-            download_pinterest_photos(url)  # Download Pinterest photos
+            download_pinterest_photos(url)  
         elif choice == '3':
             break
         else:
@@ -587,10 +552,10 @@ def tiktok_menu():
 
         if choice == '1':
             url = input("Enter the TikTok video Link: ")
-            download_tiktok_video(url)  # Download TikTok video and remove watermark
+            download_tiktok_video(url)  
         elif choice == '2':
             url = input("Enter the TikTok audio Link: ")
-            download_tiktok_audio(url)  # Download TikTok audio
+            download_tiktok_audio(url)  
         elif choice == '3':
             break
         else:
@@ -611,7 +576,7 @@ def snapchat_menu():
             url = input("Enter the Snapchat video Link: ")
             try:
                 download_snapchat_video(url)
-                # Prompt for watermark removal if required
+               
                 remove_watermark_input = input("Do you want to remove the watermark? (yes/no): ").lower()
                 if remove_watermark_input == 'yes':
                     input_file = input("Enter the downloaded video file path: ")
@@ -857,7 +822,7 @@ def generation_menu():
 '''Start of Langauge'''
 def settings_menu():
     """Display the settings menu."""
-    selected_color = color_scheme.COLOR_SCHEMES['reset']  # Default color reset
+    selected_color = color_scheme.COLOR_SCHEMES['reset'] 
 
     while True:
         print("\n------Settings Menu:------")
@@ -868,7 +833,7 @@ def settings_menu():
         choice = input("Select an option (1-3): ")
 
         if choice == '1':
-            # Call the get_color_choice function to select and apply a color scheme
+            
             selected_color = color_scheme.get_color_choice()
 
         elif choice == '2':
@@ -914,11 +879,10 @@ def update_now():
     except FileNotFoundError:
         print("update.py script not found. Make sure it’s in the correct directory.")
 
-# Log files
-# Define the log file path
+
 log_file_path = "./temp/temp.log.txt"
 
-# Ensure the temp directory exists
+s
 os.makedirs(os.path.dirname(log_file_path), exist_ok=True)
 
 def log_event(event_type):
@@ -927,17 +891,17 @@ def log_event(event_type):
 
     :param event_type: str, 'login' for log-in or 'logout' for log-out
     """
-    # Get the current date and time
+    
     current_time = datetime.now()
     timestamp = current_time.strftime("%Y-%m-%d %H:%M:%S")
 
-    # Get the computer name
+   
     computer_name = os.uname().nodename if os.name != 'nt' else os.getenv('COMPUTERNAME')
 
-    # Create the log message
+    
     log_message = f"{timestamp} - {event_type.upper()} - Computer: {computer_name}\n"
 
-    # Append the log message to the log file
+    
     with open(log_file_path, 'a') as log_file:
         log_file.write(log_message)
 
@@ -951,22 +915,22 @@ def log_out():
 
 def handle_exit(signum, frame):
     """Handles exit signal."""
-    log_out()  # Log out when the application is closed
+    log_out()  
     sys.exit(0)
 
-    # Register signal handler for graceful exit
-    signal.signal(signal.SIGINT, handle_exit)  # Handle Ctrl+C
-    signal.signal(signal.SIGTERM, handle_exit)  # Handle termination signal
+   
+    signal.signal(signal.SIGINT, handle_exit)  
+    signal.signal(signal.SIGTERM, handle_exit)  
 
-    # Keep the application running
+    
     try:
         while True:
-            time.sleep(1)  # Simulate app work (replace with actual app logic)
+            time.sleep(1)  
     except Exception as e:
         print(f"An error occurred: {str(e)}")
-        log_out()  # Log out if any error occurs
+        log_out()  
 
 
 if __name__ == "__main__":
-    main_menu()  # Pass translations to main_menu
+    main_menu()  
     log_in()
