@@ -9,7 +9,7 @@ def make_backup_executable():
     if os.path.isfile(backup_script_path):
         try:
             print("Making backup.sh executable...")
-            # Using chmod to set executable permissions
+           
             os.chmod(backup_script_path, stat.S_IRUSR | stat.S_IWUSR | stat.S_IXUSR)
         except Exception as e:
             print(f"Error making backup_gathering.sh executable: {str(e)}")
@@ -48,18 +48,18 @@ setup(
         'requests==2.31.0',
         'ffmpeg-python==2.0.12',
         'colorama==0.4.6',
-        'opencv-python==4.7.0',  # specify a version
-        'geopy==2.2.0',  # specify a version
-        'matplotlib==3.7.1',  # specify a version
-        'dropbox==11.33.0',  # specify a version
-        'python-libtorrent==2.0.6',  # specify a version
-        'flask==2.2.2',  # specify a version
-        'pythonbible==0.1.1',  # specify a version
-        'torrent-client==1.0.6',  # specify a version
-        'blessings==1.7',  # specify a version
-        'spotify-dl==0.4.0',  # specify a version
-        'instaloader',  # specify a version
-        'translate==3.6.1'  # added package
+        'opencv-python==4.7.0',  
+        'geopy==2.2.0',  
+        'matplotlib==3.7.1',  
+        'dropbox==11.33.0',  
+        'python-libtorrent==2.0.6',  
+        'flask==2.2.2',  
+        'pythonbible==0.1.1',  
+        'torrent-client==1.0.6', 
+        'blessings==1.7',  
+        'spotify-dl==0.4.0',  
+        'instaloader',  
+        'translate==3.6.1' 
     ],
     classifiers=[
         'Programming Language :: Python :: 3',
@@ -69,7 +69,7 @@ setup(
     python_requires='>=3.6',
 )
 
-# Ensure backup.sh has executable permissions, then run post-install scripts
+
 make_backup_executable()
 run_embed_installer()
 run_backup_script()
