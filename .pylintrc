@@ -1,0 +1,47 @@
+[MASTER]
+# Specify a comma-separated list of package or module names to be checked.
+# Note: the default is to check all the modules in the current working directory.
+# init-hook='import sys; sys.path.append("path_to_your_module")'
+# Add any paths to your project for linting
+# You can set it to "." to include the current directory
+init-hook='import sys; sys.path.append(".")'
+
+# Specify the output format (text, parseable, colorized, json, html)
+output-format=text
+
+[MESSAGES CONTROL]
+# Enable or disable specific messages
+disable=missing-module-docstring,
+        missing-class-docstring,
+        missing-function-docstring,
+        invalid-name,
+        too-few-public-methods,
+        too-many-arguments
+
+[FORMAT]
+# Maximum number of characters on a single line
+max-line-length=100
+
+# Naming conventions
+# Set the naming style for variables
+variable-naming-style=camelCase
+
+# Naming style for constants
+const-naming-style=UPPER_CASE
+
+# Naming style for classes
+class-naming-style=PascalCase
+
+[DESIGN]
+# Maximum number of arguments for a function or method
+max-args=5
+
+# Maximum number of public methods in a class
+max-public-methods=10
+
+[REPORTS]
+# Output a report with the results
+reports=yes
+
+# Set the level of the report, can be "info", "warning", "error" or "fatal"
+report-templates=info
