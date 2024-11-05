@@ -1,0 +1,5 @@
+* {margin: 0;padding: 0;box-sizing: border-box;}
+html{overflow:hidden;}
+body{background-color: rgb(29, 28, 28);}
+.appSider{background: #454444;max-width:250px;width: 100%;height:100%;position:absolute;left:0;}
+.asideContainer{position:relative;width:500px;height:890px;display:block;left:1000px;}
