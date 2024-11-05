@@ -4,11 +4,43 @@ import requests
 import zipfile
 import shutil
 
-# GitHub release details
+
 GITHUB_RELEASE_URL = "https://github.com/LoneStamp/BlackDownloader/releases/download/v1.10.0/BlackDownloader-v1.10.0.zip"
-DOWNLOAD_PATH = "./temp/update.zip"  # Temporary download location
-EXTRACT_PATH = "./temp/extracted_update"  # Temporary extraction folder
-TARGET_PATH = "./App/"  # Path where files will be replaced
+DOWNLOAD_PATH = "./temp/update.zip"  
+EXTRACT_PATH = "./temp/extracted_update" 
+
+
+TARGET_PATHS = {
+    "./App/": [
+        "config",
+        "config/bin/connect.rb",
+        "config/bin/quarrel.rb",
+        "config/bin/db.sqlite",
+        "config/bin/raw_select.rb",
+        "config/deb_miscellen.dev",
+        "config/main.cpp",
+        "config/Makefile.win",
+        "data/api/spotifyAPI.db",
+        "data/api/spotifyAPI.json",
+        "data/auth/facebook/facebook.details.json",
+        "data/auth/instaloader/instagram.details.json",
+        "data/forbidden/backup_gathering.sh",
+        "data/forbidden/backup.py",
+        "data/forbidden/blackmiscellen.db"
+        "data/forbidden/Khah.Jvssljavy.py"
+        "data",
+        "app.py"
+    ],
+    "./App/another_folder/": [
+        "another_config.json",
+        "another_folder/settings.py",
+    ],
+    "./App/extra_folder/": [
+        "extra_config.json",
+        "extra_folder/init.py",
+    ],
+
+}
 
 def download_update():
     print("Downloading the latest update...")
@@ -36,18 +68,36 @@ def extract_update():
         print(f"Error extracting the update: {e}")
         sys.exit(1)
 
+def should_replace(path, target_list):
+    """Check if a path is in the given target list."""
+    return any(path.startswith(target) for target in target_list)
+
 def replace_files():
-    print("Replacing old files with the new update...")
-    for root, dirs, files in os.walk(EXTRACT_PATH):
-        rel_path = os.path.relpath(root, EXTRACT_PATH)
-        dest_dir = os.path.join(TARGET_PATH, rel_path)
-        if not os.path.exists(dest_dir):
-            os.makedirs(dest_dir)
-        for file in files:
-            src_file = os.path.join(root, file)
-            dest_file = os.path.join(dest_dir, file)
-            shutil.move(src_file, dest_file)
-            print(f"Updated: {dest_file}")
+    print("Replacing old files and adding new ones from the update...")
+
+    
+    for target_base, target_list in TARGET_PATHS.items():
+        for root, dirs, files in os.walk(EXTRACT_PATH):
+            rel_path = os.path.relpath(root, EXTRACT_PATH)
+            dest_dir = os.path.join(target_base, rel_path)
+
+            
+            if not os.path.exists(dest_dir):
+                os.makedirs(dest_dir)
+
+            for file in files:
+                src_file = os.path.join(root, file)
+                file_rel_path = os.path.join(rel_path, file)
+                dest_file = os.path.join(dest_dir, file)
+
+               
+                if should_replace(file_rel_path, target_list):
+                    shutil.move(src_file, dest_file)
+                    print(f"Updated: {dest_file}")
+                else:
+                    
+                    shutil.move(src_file, dest_file)
+                    print(f"Added new file: {dest_file}")
 
 def cleanup():
     print("Cleaning up temporary files...")
