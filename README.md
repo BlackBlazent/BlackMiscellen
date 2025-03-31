@@ -19,7 +19,7 @@
 *(Add relevant images or descriptions here)*  
 
 ## 📥 Download  
-Download **BlackMusic** only from the source provided below. For your safety, avoid downloading from unreliable websites.
+Download **BlackMiscellen** only from the source provided below. For your safety, avoid downloading from unreliable websites.
 
 Available on:  
 ---
